@@ -1,0 +1,19 @@
+name: PartyHat
+main: com.webkonsept.minecraft.partyhat.PartyHat
+version: 0.1
+website: http://minecraft.webkonsept.com/plugins/details/PartyHat.html
+location: http://minecraft.webkonsept.com/plugins/download/PartyHat.jar
+database: false
+description: Let's you place any block as your helmet using a [PartyHat] sign.
+commands:
+generators: [bukget]
+categories: [FUN]
+maintainer: DemmyDemon
+authors: [DemmyDemon]
+conflicts: []
+required: [Permissions]
+optional: []
+engines:
+    craftbukkit:
+        min: 935
+        max: 953
