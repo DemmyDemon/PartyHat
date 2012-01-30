@@ -1,19 +1,51 @@
 name: PartyHat
 main: com.webkonsept.minecraft.partyhat.PartyHat
-version: 0.1
+version: 0.3
+branch: stable
 website: http://minecraft.webkonsept.com/plugins/details/PartyHat.html
 location: http://minecraft.webkonsept.com/plugins/download/PartyHat.jar
+thread: http://forums.bukkit.org/threads/PartyHat.25891/
 database: false
 description: Let's you place any block as your helmet using a [PartyHat] sign.
 commands:
+    partyhat: 
+        description: Interact with the partyhat plugin
+        usage: /<command> reload   (More actions later?)
 generators: [bukget]
 categories: [FUN]
 maintainer: DemmyDemon
 authors: [DemmyDemon]
 conflicts: []
-required: [Permissions]
-optional: []
+required: []
+optional: [Permissions]
+permissions:
+    partyhat.*:
+        description: Gives full access
+        children:
+            partyhat.sign : true
+            partyhat.use : true
+            partyhat.wear.* : true
+            partyhat.command.* : true
+    partyhat.sign:
+        description: Can put up the partyhat sign
+        default: op
+    partyhat.use:
+        description: Can use the partyhat sign
+        default: op
+    partyhat.wear.*:
+        description: Can wear anything using the partyhat sign
+        default: op
+    partyhat.wear.blockNameHere:
+        description: Can wear blockNameHere on head
+        default: false
+    partyhat.command.*:
+        description: Access to all "/partyhat" commands
+        children:
+            partyhat.command.reload : true
+    partyhat.command.reload:
+        description: Access to the "/partyhat reload" command
+        default: op
 engines:
     craftbukkit:
-        min: 935
-        max: 953
+        min: 1818
+        max: 1846

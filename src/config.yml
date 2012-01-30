@@ -1,0 +1,6 @@
+verbose: false
+currency: 266
+currencyName: 'g'
+baseCost: 0.01
+partialRepair: false
+distributePartialRepair: true
