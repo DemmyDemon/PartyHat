@@ -54,7 +54,7 @@ public class PartyPlayerListener implements Listener {
 									|| !(plugin.useWhitelistPermissions)
 									// If whitelist-style is active, grant permission for this block.  If not, ignore this step
 								){
-									if (player.getInventory().getHelmet().getType().equals(Material.AIR)){
+									if (player.getInventory().getHelmet() == null || player.getInventory().getHelmet().getType().equals(Material.AIR)){
 										player.getInventory().setHelmet(helmet);
 										helmetName = helmetName.toLowerCase().replaceAll("_"," ");
 										player.sendMessage(ChatColor.GOLD+"You are now wearing a "+helmetName+" block on your head!");

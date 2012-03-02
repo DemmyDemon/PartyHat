@@ -1,6 +1,6 @@
 name: PartyHat
 main: com.webkonsept.minecraft.partyhat.PartyHat
-version: 0.3
+version: 0.3.2
 branch: stable
 website: http://minecraft.webkonsept.com/plugins/details/PartyHat.html
 location: http://minecraft.webkonsept.com/plugins/download/PartyHat.jar
